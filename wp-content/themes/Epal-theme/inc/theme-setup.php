@@ -299,7 +299,6 @@ add_filter('parse_query', 'epal_posts_useronly' );
 
 // Bỏ Javascript mặc định wordpress tạo ra trên theme
 add_action( 'wp_enqueue_scripts', function () {
-   wp_deregister_script( 'jquery' );
    wp_deregister_script( 'wp-embed' );
 });
 
