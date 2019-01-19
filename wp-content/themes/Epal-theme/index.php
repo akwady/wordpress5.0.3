@@ -1,20 +1,16 @@
-<!---->
-<!---->
-<!---->
-<!--Không Code Ở Trang Này Chuyển Qua Trang tpl-home.php-->
-<!---->
-<!---->
-<!---->
+<?php
+/**
+ * Template Name: Home
+ */
+
+//      Hàm Lấy File header.php
+get_header();
+
+get_template_part('sections/menu-main');
+?>
 
 
-
-<!--lấy dữ liệu trong Advanced Custom Fields-->
-<?php //echo get_field('' , 'option') ?>
-
-
-<!--lấy dữ vòng lập trong Advanced Custom Fields-->
-<?php //while(have_rows('' , 'option')) : the_row() ?>
-<!---->
-<?php //echo get_sub_field('' , 'option') ?>
-<!---->
-<?php //endwhile; ?>
+<?php
+//      Hàm Lấy File footer.php
+get_footer();
+?>
