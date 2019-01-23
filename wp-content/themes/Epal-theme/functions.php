@@ -54,8 +54,8 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 //Add Css Thay Đổi Trang wp-login wordpress
 function login_css() {
-    wp_enqueue_style( 'login_css', get_template_directory_uri() . '/wp-admin/login.css' );
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+    wp_enqueue_style( 'login_css', THEME_URL . '/wp-admin/login.css' );
+    wp_enqueue_style( 'bootstrap', THEME_URL . '/css/bootstrap.min.css' );
 }
 add_action('login_head', 'login_css');
 

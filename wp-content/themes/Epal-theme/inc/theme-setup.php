@@ -321,3 +321,20 @@ add_action( 'init', function () {
   // Bỏ rel next/prev links
   remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 });
+
+
+
+//*
+//* Loại Bỏ ver
+//*
+remove_action('wp_head', 'wp_generator');
+add_filter('the_generator', '__return_empty_string');
+
+function mmolee_remove_version_scripts_styles($src) {
+    if (strpos($src, 'ver=')) {
+        $src = remove_query_arg('ver', $src);
+    }
+    return $src;
+}
+add_filter('style_loader_src', 'mmolee_remove_version_scripts_styles', 9999);
+add_filter('script_loader_src', 'mmolee_remove_version_scripts_styles', 9999);
